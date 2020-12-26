@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #222;
+  font-family: sans-serif;
+}
+nav {
+  background: #222;
+  padding: 1px 16px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color:#ff4719;
+}
+.logo a:hover {
+  text-decoration: none;
+}
+.menu li {
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+.logo a,.toggle a {
+  font-size: 20px;
+}
+.logo a{
+  color:#fff;
+  font-family: 'Baloo 2', cursive;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle {
+  order: 1;
+}
+.item.button {
+  order: 3;
+}
+.item.secondary{
+  order: 4;
+}
+.item {
+  width: 100%;
+  text-align: center;
+  order: 2;
+  display: none;
+}
+.button a {
+    padding: 7.5px 15px;
+    background: #ff4719;
+    border: 1px #ff2f01  solid;
+    border-radius:50em;
+}
+.secondary{
+  border-bottom: 1px solid #444;
+}
+.secondary a {
+    background: transparent;
+    padding: 7.5px 35px;
+    border-radius:50em;
+    border: 1px #ff2f01  solid;
+}
+.button a:hover {
+    text-decoration: none;
+    transition:all .25s;
+}
+.button:not(.secondary) a:hover {
+    background: #ff0000;
+    border-color:#ff0101 ;
+    color:#fff;
+}
+.secondary a:hover {
+    color: #ff4719;
+}
+.toggle {
+  cursor:pointer;
+}
+.bars {
+  background: #999;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+.bars:before,
+.bars:after {
+  background: #999;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.bars:before {
+  top: 5px;
+}
+.bars:after {
+  top: -5px;
+}
+@media all and (min-width: 600px) {
+  .logo a{
+    font-size: 25px;
+  }
+  .menu li {
+    font-size: 18px;
+  }
+  .menu {
+      justify-content: center;
+  }
+  .logo {
+      flex: 1;
+  }
+  .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+  }
+  .item.secondary {
+      width: auto;
+      order: 1;
+      display: block;
+  }
+  .toggle {
+      order: 2;
+  }
+  .item{
+    order : 3;
+  }
+  .item.last{
+    border-bottom: 1px solid #444;
+  }
+  .secondary a {
+      padding: 7.5px 15px;
+
+  }
+}
+@media all and (min-width: 1000px) {
+  .logo a{
+    font-size: 30px;
+  }
+  .menu li {
+    font-size: 20px;
+  }
+  .item {
+      display: block;
+      width: auto;
+  }
+  .toggle {
+      display: none;
+  }
+  .logo {
+      order: 0;
+  }
+  .item {
+      order: 1;
+  }
+  .button {
+      order: 2;
+  }
+  .secondary{
+    order: 3;
+  }
+  .menu li {
+      padding: 15px 10px;
+  }
+  .menu li.button {
+      padding-right: 0;
+  }
+  .secondary{
+    border : 0px;
+  }
+  .item.last{
+    border-bottom: 0px;
+  }
+}
+  .bannerarea {
+    display: flex;
+    align-items: flex-start;
+  }
+  .bannerarea h1 {
+    color: #fff;
+    font-size: 40px;
+    padding: 25px 10px 30px 20px;
+    font-family: 'Lato', sans-serif;
+  }
+  .bannerbtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+  }
+  .bannerbtn .getbtn{
+    padding: 7.5px 60px;
+    background: #ff4719;
+    border: 1px #ff2f01  solid;
+    border-radius:50em;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .bannerbtn .logbtn{
+    padding: 7.5px 86px;
+    border: 1px #ff4719 solid;
+    border-radius: 50em;
+    font-family: 'Montserrat', sans-serif;
+    color:#ff4719;
+  }
+  .bannerabout {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    padding-top: 20px;
+    text-decoration: none;
+  }
+@media all and (min-width:340px) {
+.bannerarea h1 {
+  font-size: 50px;
+  padding: 60px 10px 60px 25px;
+}
+.bannerbtn{
+  font-size: 25px;
+}
+.bannerbtn .getbtn{
+  padding: 7.5px 70px;
+  margin-bottom: 20px;
+}
+.bannerbtn .logbtn{
+  padding: 7.5px 104px;
+}
+}
+@media all and (min-width:600px) {
+  .bannerarea h1 {
+    font-size: 70px;
+    padding: 30px 10px 40px 40px;
+  }
+  .bannerbtn{
+    font-size: 30px;
+  }
+  .bannerbtn .getbtn{
+    margin-bottom: 25px;
+    padding: 7.5px 60px;
+  }
+  .bannerbtn .logbtn{
+    padding: 7.5px 102px;
+  }
+  .bannerabout {
+    font-size: 15px;
+  }
+}
+@media all and (min-width:1000px) {
+  .bannerarea h1 {
+    font-size: 80px;
+    padding: 30px 10px 40px 40px;
+  }
+  .bannerbtn {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 40px;
+    justify-content: flex-start;
+    font-size: 35px;
+  }
+  .bannerbtn .getbtn{
+    margin-right : 10px; margin-bottom: 10px;
+    padding: 7.5px 60px;
+  }
+  .bannerbtn .logbtn{
+    padding: 7.5px 107px;
+  }
+  .bannerabout {
+    align-items: flex-start;
+    font-size: 16px;
+    padding-top: 40px;padding-left: 50px;
+  }
+}
