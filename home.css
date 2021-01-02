@@ -112,13 +112,66 @@ a:hover {
   top: -5px;
 }
 #navbar {
+  width: 100%;
+  height:auto;
   position: sticky;
   top:0;
 }
 .section {
-  width: 100%;
-  height: 1000px;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
   background-color: #ff4719;
+  padding-top: 30px;
+}
+.box2 {
+  height: 300px;
+  background-color: #fff;
+  padding: 10px;
+  margin:20px;
+  border-radius: 20px;
+  box-shadow: -20px 20px 5px -4px rgba(34,34,34,0.5);
+-webkit-box-shadow: -20px 20px 5px -4px rgba(34,34,34,0.5);
+-moz-box-shadow: -20px 20px 5px -4px rgba(34,34,34,0.5);
+}
+.box1{
+  height: 300px;
+  margin:20px;
+  padding: 10px;
+}
+h2{
+  font-size: 30px;
+}
+.box2 h2{
+  color:#ff4719;
+}
+.box1 h2{
+  color:#fff;
+}
+@media all and (min-width:700px){
+  .section{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .box1{
+    width:40%;
+    padding: 20px;
+    margin:40px;
+  }
+  .box2{
+    width:60%;
+    padding: 20px;
+    margin:40px;
+  }
+  h2{
+    font-size: 40px;
+  }
+}
+@media all and (min-width:1000px){
+  h2{
+    font-size: 60px;
+  }
 }
 @media all and (min-width: 600px) {
   .logo a{
@@ -226,17 +279,7 @@ a:hover {
     border-radius: 50em;
     font-family: 'Montserrat', sans-serif;
     color:#ff4719;
-  }
-  .bannerabout {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    letter-spacing: 3px;
-    padding-top: 20px;
-    text-decoration: none;
-    margin-bottom: 50px ;
+    margin-bottom: 70px;
   }
 @media all and (min-width:340px) {
 .bannerarea h1 {
@@ -269,9 +312,6 @@ a:hover {
   .bannerbtn .logbtn{
     padding: 7.5px 102px;
   }
-  .bannerabout {
-    font-size: 15px;
-  }
 }
 @media all and (min-width:1000px) {
   .bannerarea h1 {
@@ -292,9 +332,130 @@ a:hover {
   .bannerbtn .logbtn{
     padding: 7.5px 107px;
   }
-  .bannerabout {
-    align-items: flex-start;
+}
+#footer {
+  width:100%;
+  height:auto;
+  background-color: #222;
+  color:#888;
+  display: flex;
+  flex-direction:column-reverse;
+  align-items: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+#flogo {
+  font-family: 'Baloo 2', cursive; 
+}
+.sec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#upper, #lower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fhead{
+  color:#ff4719;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+#sec4upper, #sec4lower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#sec4upper {
+  margin-bottom: 20px;
+}
+#social i {
+  margin: 2px 8px;
+  font-size: 20px;
+}
+#social i:hover{
+  color:#ff4719;
+}
+#flogo {
+  font-size: 20px;
+}
+#tagln{
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+}
+.sec {
+  padding: 5px;
+  margin: 10px;
+}
+#upper{
+  margin-bottom: 20px;
+}
+#lower{
+  font-size: 14px;
+}
+.list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media all and (min-width:750px) {
+  #footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #flogo {
+    font-size: 26px;
+  }
+  #tagln {
+    font-size: 12px;
+  }
+  .sec {
+    padding: 5px;
+    margin: 20px;
+  }
+  #upper {
+    margin-bottom: 40px;
+  }
+  #lower{
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .list{
     font-size: 16px;
-    padding-top: 40px;padding-left: 50px;
+    align-items: flex-start;
+  }
+  .sec.four {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .fhead{
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  #social i{
+    font-size: 30px;
+  }
+  #sec4upper, #sec4lower {
+    align-items: flex-start;
   }
 }
+@media all and (min-width:1000px){
+  #flogo{
+    font-size: 30px;
+  }
+  #tagln{
+    font-size: 16px;
+  }
+  #lower{
+    font-size: 20px;
+  }
+  .list{
+    font-size: 20px;
+  }
+  .fhead{
+    font-size: 26px;
+  }
+}
+
