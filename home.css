@@ -111,6 +111,15 @@ a:hover {
 .bars:after {
   top: -5px;
 }
+#navbar {
+  position: sticky;
+  top:0;
+}
+.section {
+  width: 100%;
+  height: 1000px;
+  background-color: #ff4719;
+}
 @media all and (min-width: 600px) {
   .logo a{
     font-size: 25px;
@@ -227,6 +236,7 @@ a:hover {
     letter-spacing: 3px;
     padding-top: 20px;
     text-decoration: none;
+    margin-bottom: 50px ;
   }
 @media all and (min-width:340px) {
 .bannerarea h1 {
